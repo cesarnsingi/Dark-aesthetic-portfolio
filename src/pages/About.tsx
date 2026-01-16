@@ -13,7 +13,7 @@ const About = () => {
 		},
 		{
 			icon: <Briefcase className="w-6 h-6" />,
-			title: "3+ Internships",
+			title: "1 Internship, then 2 Contracts",
 			description: "Professional work experience"
 		},
 	];
