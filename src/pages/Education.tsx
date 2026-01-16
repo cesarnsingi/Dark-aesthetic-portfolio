@@ -18,13 +18,6 @@ const Education = () => {
 				"C (Programming Language),",
 				"Digital Systems,",
 				"Data Analysis",
-				"Problem Solving",
-				"Technical Documentation",
-				"Project Management",
-				"Team Collaboration",
-				"Professional Communication.",
-				"Data Structures ",
-				"Algorithms",
 			],
 			description:
 				"During my time at CPUT, I took programming courses, including C programming, which provided me with a strong foundation in problem-solving, data analysis, and project management. My studies also included Digital Systems and Technical Documentation, where I discovered a genuine passion for software development. Working on projects and coding challenges helped me sharpen my skills and inspired me to pursue a career as a software engineer, creating efficient and scalable solutions."
