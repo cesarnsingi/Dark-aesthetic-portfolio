@@ -16,7 +16,7 @@ const projects = [
   {
     title: 'Joshua Organisation',
     description:
-      'Service provider specializing in Maritime Training, Visa Services, Education, Transportation, and Accommodation.',
+      'Service Provider specializing in Maritime Training, Visa Services, Education, Transportation, and Accommodation.',
     image: '/projects_img/project-2.png',
     live: 'https://joshuaorganisation.com',
     tags: ['Next.js', 'TypeScript', 'Liveblocks', 'Fabric.js', 'Shadcn', 'Tailwind CSS'],
