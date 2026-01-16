@@ -27,7 +27,7 @@ const projects = [
       'Designed and developed a professional portfolio using TypeScript and React, showcasing projects withinteractive features.',
     image: '/projects_img/project-3.png',
     live: 'https://im-profile.vercel.app',
-    tags: ['Tailwind CSS', 'React.js', 'Next.js', 'Verce;', 'Tailwind CSS'],
+    tags: ['Tailwind CSS', 'React.js', 'Next.js', 'Vercel', 'Tailwind CSS'],
   },
   {
     title: 'Odonto Care',
