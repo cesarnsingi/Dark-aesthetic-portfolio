@@ -8,15 +8,15 @@ const projects = [
   {
     title: 'AME {EMA} LAB ORG',
     description:
-      'Real-time collaborative document editor built with Next.js, TypeScript, and Tailwind CSS, featuring live editing, comments, and notifications.',
+      'Developed a dynamic, responsive website using TypeScript,React, and Next.js, enhancing user engagement and accessibility.',
     image: '/projects_img/project-1.png',
     live: 'https://www.emaorg.com',
-    tags: ['Next.js', 'TypeScript', 'Liveblocks', 'Lexical Editor', 'ShadCN', 'Tailwind CSS'],
+    tags: ['Next.js', 'TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Vercel'],
   },
   {
     title: 'Joshua Organisation',
     description:
-      'A real-time collaborative design tool inspired by Figma. This application allows users to create, modify, and collaborate on designs in real-time.',
+      ' service provider specializing in Maritime Training, Visa Services, Education, Transportation, and Accommodation.',
     image: '/projects_img/project-2.png',
     live: 'https://joshuaorganisation.com',
     tags: ['Next.js', 'TypeScript', 'Liveblocks', 'Fabric.js', 'Shadcn', 'Tailwind CSS'],
@@ -24,23 +24,23 @@ const projects = [
   {
     title: 'IM - Executive Profile',
     description:
-      'The Video Conferencing App enables users to create and join video meetings with chat, screen sharing, and recording features.',
+      'Designed and developed a professional portfolio using TypeScript and React, showcasing projects withinteractive features.',
     image: '/projects_img/project-3.png',
     live: 'https://im-profile.vercel.app',
-    tags: ['Tailwind CSS', 'React.js', 'Next.js', 'Clerk', 'Stream'],
+    tags: ['Tailwind CSS', 'React.js', 'Next.js', 'Verce;', 'Tailwind CSS'],
   },
   {
     title: 'Odonto Care',
     description:
-      'React-based chatbot clone of Google Gemini AI. It offers a chat interface, uses Gemini for responses, and is styled with CSS.',
+      ' Built a full-featured dental service booking site with TypeScript and React, streamlining appointment scheduling and client interaction.',
     image: '/projects_img/project-4.png',
     live: 'https://odontocare-tan.vercel.app',
-    tags: ['React.js', 'Tailwind CSS', 'JavaScript', 'Google APIs'],
+    tags: ['React.js', 'Tailwind CSS', 'JavaScript', 'TypeScript','Vercel',],
   },
   {
     title: 'AngoTour',
     description:
-      'Travel App is a Next.js web application offering travel information, built with Tailwind CSS for a modular, responsive user interface.',
+      'Travel App travel and tourism service connecting clients to seamless travel experiences .',
     image: '/projects_img/project-5.png',
     live: 'https://angotour.vercel.app',
     tags: ['React.js', 'Tailwind CSS', 'JavaScript', 'TypeScript'],
