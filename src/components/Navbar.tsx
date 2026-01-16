@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -9,7 +9,12 @@ import SearchDialog from './SearchDialog';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [clientPath, setClientPath] = useState<string | null>(null); // null means "not yet mounted"
   const pathname = usePathname();
+
+  useEffect(() => {
+    setClientPath(pathname); // only set after mount
+  }, [pathname]);
 
   const navLinks = [
     { path: '/', label: 'Home' },
@@ -42,17 +47,22 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               <SearchDialog />
-              {navLinks.map(link => (
-                <Link
-                  key={`nav-${link.path}`}
-                  href={link.path}
-                  className={`nav-link ${
-                    pathname === link.path ? 'bg-white/15 backdrop-blur-sm' : ''
-                  }`}
-                >
-                  <span>{link.label}</span>
-                </Link>
-              ))}
+
+              {/* Render only after clientPath is ready */}
+              {clientPath &&
+                navLinks.map((link) => (
+                  <Link
+                    key={`nav-${link.path}`}
+                    href={link.path}
+                    className={`nav-link ${
+                      clientPath === link.path
+                        ? 'bg-white/15 backdrop-blur-sm'
+                        : ''
+                    }`}
+                  >
+                    <span>{link.label}</span>
+                  </Link>
+                ))}
             </div>
 
             {/* Mobile header right section */}
@@ -69,7 +79,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
+        {isMenuOpen && clientPath && (
           <motion.div
             className="md:hidden absolute top-full left-0 right-0 bg-black/50 backdrop-blur-xl"
             initial={{ opacity: 0, y: -10 }}
@@ -77,12 +87,12 @@ const Navbar = () => {
             transition={{ duration: 0.2 }}
           >
             <div className="px-4 pt-2 pb-3 space-y-1">
-              {navLinks.map(link => (
+              {navLinks.map((link) => (
                 <Link
                   key={`mobile-${link.path}`}
                   href={link.path}
                   className={`block px-3 py-2 text-gray-400 hover:text-white transition-colors ${
-                    pathname === link.path
+                    clientPath === link.path
                       ? 'bg-white/10 backdrop-blur-sm text-white'
                       : ''
                   }`}
