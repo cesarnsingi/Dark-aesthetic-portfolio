@@ -10,9 +10,9 @@ const Footer = () => {
 			<div className="absolute inset-0 bg-black/50 backdrop-blur-xl" />
 
 			<div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-				<div className="grid grid-cols-1 py-12">
+				<div className="grid grid-cols-1 py-6">
 					{/* Contact */}
-					<div className="space-y-4 text-center">
+					<div className="space-y-2 text-center">
 						<h3 className="text-sm font-semibold text-white"></h3>
 						<a
 							href="mailto:cesarnsingi@hotmail.com"
