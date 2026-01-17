@@ -767,6 +767,9 @@ video {
 .h-auto {
   height: auto;
 }
+.h-10 {
+  height: 2.5rem;
+}
 .max-h-\[60vh\] {
   max-height: 60vh;
 }
@@ -805,6 +808,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.w-10 {
+  width: 2.5rem;
 }
 .max-w-2xl {
   max-width: 42rem;
