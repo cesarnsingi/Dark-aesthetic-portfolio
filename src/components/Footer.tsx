@@ -13,7 +13,7 @@ const Footer = () => {
 				<div className="grid grid-cols-1 py-12">
 					{/* Contact */}
 					<div className="space-y-4 text-center">
-						<h3 className="text-sm font-semibold text-white">Contact</h3>
+						<h3 className="text-sm font-semibold text-white"></h3>
 						<a
 							href="mailto:cesarnsingi@hotmail.com"
 							className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2"
