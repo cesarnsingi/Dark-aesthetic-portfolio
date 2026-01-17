@@ -17,12 +17,7 @@ const searchData = [
 		path: '/about',
 		keywords: ['about', 'background', 'education', 'bio', 'profile', 'cv', 'resume', 'cesar', 'nsingi', 'full stack developer', 'software engineer', 'web developer']
 	},
-	{
-		title: 'Education',
-		description: 'View my educational background',
-		path: '/education',
-		keywords: ['education', 'university', 'college', 'degree', 'school', 'board', 'computer science', 'engineering', 'b.tech', 'bengal college']
-	},
+	
 	{
 		title: 'Experience',
 		description: 'Check out my professional experience',
