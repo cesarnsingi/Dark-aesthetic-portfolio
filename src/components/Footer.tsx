@@ -18,7 +18,7 @@ const Footer = () => {
 							href="mailto:cesarnsingi@hotmail.com"
 							className="text-sm text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2"
 						>
-							<Mail className="w-10 h-10" />
+							<Mail className="w-10 h-10" style={{ transform: 'translateY(-10px)' }}/>
 						</a>
 					</div>
 				</div>
