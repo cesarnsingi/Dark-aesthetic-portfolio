@@ -11,12 +11,6 @@ const searchData = [
 		path: '/',
 		keywords: ['home', 'cv', 'resume', 'start', 'welcome', 'portfolio', 'cesar', 'cesar nsingi', 'cesar1', 'software developer', 'full stack developer', 'mern stack', 'web developer']
 	},
-	{
-		title: 'About',
-		description: 'Learn more about me and my background',
-		path: '/about',
-		keywords: ['about', 'background', 'education', 'bio', 'profile', 'cv', 'resume', 'cesar', 'nsingi', 'full stack developer', 'software engineer', 'web developer']
-	},
 	
 	{
 		title: 'Experience',
