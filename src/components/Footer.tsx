@@ -26,7 +26,10 @@ const Footer = () => {
 
 				{/* Bottom bar */}
 				<div className="border-t border-white/10 py-6">
-					<div className="flex justify-center">
+					<div className="flex flex-col items-center gap-1">
+						<p className="text-sm text-gray-400">
+							Design & Developed by Cesar Nsingi
+						</p>
 						<p className="text-sm text-gray-400">
 							© {currentYear} All rights reserved.
 						</p>
