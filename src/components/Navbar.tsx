@@ -9,11 +9,11 @@ import SearchDialog from './SearchDialog';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [clientPath, setClientPath] = useState<string | null>(null); // null means "not yet mounted"
+  const [clientPath, setClientPath] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
-    setClientPath(pathname); // only set after mount
+    setClientPath(pathname);
   }, [pathname]);
 
   const navLinks = [
@@ -22,7 +22,7 @@ const Navbar = () => {
     { path: '/experience', label: 'Experience' },
     { path: '/skills', label: 'Skills' },
     { path: '/projects', label: 'Projects' },
-    { path: '/contact', label: 'Contact' },
+    // ❌ Contact removed from navbar
   ];
 
   return (
@@ -47,7 +47,6 @@ const Navbar = () => {
             <div className="hidden md:flex items-center space-x-6">
               <SearchDialog />
 
-              {/* Render only after clientPath is ready */}
               {clientPath &&
                 navLinks.map((link) => (
                   <Link
@@ -64,14 +63,18 @@ const Navbar = () => {
                 ))}
             </div>
 
-            {/* Mobile header right section */}
+            {/* Mobile header right */}
             <div className="flex md:hidden items-center space-x-2">
               <SearchDialog />
               <button
                 className="p-2 text-gray-400 hover:text-white transition-colors"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
-                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isMenuOpen ? (
+                  <X className="w-6 h-6" />
+                ) : (
+                  <Menu className="w-6 h-6" />
+                )}
               </button>
             </div>
           </div>
