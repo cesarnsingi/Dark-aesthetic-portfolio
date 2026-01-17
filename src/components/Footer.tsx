@@ -6,26 +6,12 @@ import { Code2, Github, Linkedin, Mail } from 'lucide-react';
 const Footer = () => {
 	const currentYear = new Date().getFullYear();
 
-	const pageLinks = [
-		{ name: 'Home', path: '/' },
-		{ name: 'About', path: '/about' },
-		{ name: 'Experience', path: '/experience' },
-		{ name: 'Skills', path: '/skills' },
-		{ name: 'Projects', path: '/projects' },
-		{ name: 'Contact', path: '/contact' },
-	];
-
-	// Split links into columns
-	const column1 = pageLinks.slice(0, 3);
-	const column2 = pageLinks.slice(3, 5);
-	const column3 = pageLinks.slice(5, 7);
-
 	return (
 		<footer className="relative mt-24">
 			<div className="absolute inset-0 bg-black/50 backdrop-blur-xl" />
 
 			<div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-				<div className="grid grid-cols-1 md:grid-cols-4 gap-12 py-12">
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-12 py-12">
 					{/* Branding */}
 					<div className="space-y-4">
 						<Link href="/" className="flex items-center space-x-3">
@@ -51,46 +37,6 @@ const Footer = () => {
 								</a>
 							</li>
 						</ul>
-					</div>
-
-					{/* Quick Links */}
-					<div className="space-y-4">
-						<h3 className="text-sm font-semibold text-white">Quick Links</h3>
-						<div className="grid grid-cols-3 gap-x-6 gap-y-3">
-							<div>
-								{column1.map(link => (
-									<Link
-										key={link.path}
-										href={link.path}
-										className="block text-sm text-gray-400 hover:text-white transition-colors mb-2"
-									>
-										{link.name}
-									</Link>
-								))}
-							</div>
-							<div>
-								{column2.map(link => (
-									<Link
-										key={link.path}
-										href={link.path}
-										className="block text-sm text-gray-400 hover:text-white transition-colors mb-2"
-									>
-										{link.name}
-									</Link>
-								))}
-							</div>
-							<div>
-								{column3.map(link => (
-									<Link
-										key={link.path}
-										href={link.path}
-										className="block text-sm text-gray-400 hover:text-white transition-colors mb-2"
-									>
-										{link.name}
-									</Link>
-								))}
-							</div>
-						</div>
 					</div>
 
 					{/* Social */}
