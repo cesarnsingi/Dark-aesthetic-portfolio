@@ -5,7 +5,6 @@ import {
   Github,
   Linkedin,
   FileDown,
-  User,
   Send
 } from 'lucide-react';
 import Link from 'next/link';
@@ -107,14 +106,6 @@ const Home = () => {
               <FileDown className="w-4 h-4 sm:w-5 sm:h-5" />
               Download CV
             </a>
-
-            <Link
-              href="/about"
-              className="px-4 sm:px-6 py-2.5 sm:py-3 bg-white/10 text-white rounded-full text-sm sm:text-base font-medium hover:bg-white/20 transition-colors flex items-center gap-2"
-            >
-              <User className="w-4 h-4 sm:w-5 sm:h-5" />
-              About Me
-            </Link>
 
             <Link
               href="/contact"
