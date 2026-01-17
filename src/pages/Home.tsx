@@ -10,6 +10,13 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import useSWR from 'swr';
+import {
+  SiTypescript,
+  SiReact,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiPython
+} from 'react-icons/si';
 
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
@@ -48,15 +55,39 @@ const Home = () => {
           I design, code, and use data to build products.
         </motion.h1>
 
-        {/* DESCRIPTION */}
+        {/* DESCRIPTION WITH INLINE ICONS */}
         <motion.p
-          className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-4 sm:mb-5 max-w-2xl mx-auto px-2 sm:px-4"
+          className="text-lg sm:text-xl md:text-2xl text-gray-400 mb-6 max-w-2xl mx-auto px-2 sm:px-4 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Software Engineer, I build with TypeScript, React, TailWindCSS,
-          Next.js and modern Web Technologies. Enthusiastic about Python.
+          Software Engineer, I build with{' '}
+          <span className="inline-flex items-center gap-1 text-white">
+            <SiTypescript className="w-5 h-5 text-blue-500" />
+            TypeScript
+          </span>
+          ,{' '}
+          <span className="inline-flex items-center gap-1 text-white">
+            <SiReact className="w-5 h-5 text-cyan-400" />
+            React
+          </span>
+          ,{' '}
+          <span className="inline-flex items-center gap-1 text-white">
+            <SiTailwindcss className="w-5 h-5 text-sky-400" />
+            TailwindCSS
+          </span>
+          ,{' '}
+          <span className="inline-flex items-center gap-1 text-white">
+            <SiNextdotjs className="w-5 h-5 text-white" />
+            Next.js
+          </span>{' '}
+          and modern Web Technologies. Enthusiastic about{' '}
+          <span className="inline-flex items-center gap-1 text-white">
+            <SiPython className="w-5 h-5 text-yellow-400" />
+            Python
+          </span>
+          .
         </motion.p>
 
         {/* CTA BUTTONS */}
@@ -67,7 +98,6 @@ const Home = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <div className="flex justify-center flex-wrap gap-3 sm:gap-4">
-            {/* DOWNLOAD CV */}
             <a
               href="/files/cv_pdf/César_Nsingi_CV_EN.pdf"
               target="_blank"
@@ -78,7 +108,6 @@ const Home = () => {
               Download CV
             </a>
 
-            {/* ABOUT */}
             <Link
               href="/about"
               className="px-4 sm:px-6 py-2.5 sm:py-3 bg-white/10 text-white rounded-full text-sm sm:text-base font-medium hover:bg-white/20 transition-colors flex items-center gap-2"
@@ -87,7 +116,6 @@ const Home = () => {
               About Me
             </Link>
 
-            {/* GET IN TOUCH */}
             <Link
               href="/contact"
               className="px-4 sm:px-6 py-2.5 sm:py-3 bg-white/10 text-white rounded-full text-sm sm:text-base font-medium hover:bg-white/20 transition-colors flex items-center gap-2"
@@ -105,7 +133,6 @@ const Home = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          {/* GITHUB */}
           <motion.a
             href="https://github.com/crnsingi"
             target="_blank"
@@ -122,7 +149,6 @@ const Home = () => {
             </span>
           </motion.a>
 
-          {/* LINKEDIN */}
           <motion.a
             href="https://www.linkedin.com/in/cesar-nsingi/"
             target="_blank"
