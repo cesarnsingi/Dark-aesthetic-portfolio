@@ -71,15 +71,10 @@ const Footer = () => {
 
 				{/* Bottom bar */}
 				<div className="border-t border-white/10 py-6">
-					<div className="flex flex-col md:flex-row justify-between items-center">
+					<div className="flex justify-center">
 						<p className="text-sm text-gray-400">
 							© {currentYear} César Nsingi. All rights reserved.
 						</p>
-						<div className="flex space-x-6 mt-4 md:mt-0">
-							<span className="text-sm text-gray-400">
-								César Nsingi&apos;s Portfolio
-							</span>
-						</div>
 					</div>
 				</div>
 			</div>
