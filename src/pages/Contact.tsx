@@ -46,7 +46,6 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <Mail className="w-5 h-5" />,
-      label: 'Email',
       value: 'cesarnsingi@hotmail.com',
       link: 'mailto:cesarnsingi@hotmail.com'
     },
@@ -88,7 +87,7 @@ const Contact = () => {
               <div className="space-y-3 sm:space-y-4">
                 {contactInfo.map((info, index) => (
                   <motion.div
-                    key={info.label}
+                    key={info.value}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
@@ -102,7 +101,7 @@ const Contact = () => {
                         {info.icon}
                       </div>
                       <div>
-                        <p className="text-xs sm:text-sm text-gray-400">{info.label}</p>
+                        {/* LABEL REMOVED */}
                         <p className="text-sm sm:text-base text-white group-hover:text-white transition-colors">
                           {info.value}
                         </p>
