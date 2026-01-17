@@ -1,26 +1,19 @@
 'use client';
 
-import { VercelLogo } from '@/components/TechLogos';
 import { motion } from 'framer-motion';
 import {
   Github,
   Linkedin,
-  Copy,
-  Check,
   FileDown,
   User,
   Send
 } from 'lucide-react';
 import Link from 'next/link';
-import { useState } from 'react';
 import useSWR from 'swr';
 
 const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 const Home = () => {
-  const [copied, setCopied] = useState(false);
-  const email = 'cesarnsingi@hotmail.com';
-
   const { data: githubData } = useSWR(
     'https://api.github.com/users/crnsingi',
     fetcher
@@ -30,25 +23,6 @@ const Home = () => {
     const count = githubData?.public_repos ?? 0;
     return count < 5 ? count.toString() : `${Math.floor(count / 5) * 5}+`;
   })();
-
-  const copyToClipboard = async () => {
-    try {
-      await navigator.clipboard.writeText(email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Failed to copy:', err);
-    }
-  };
-
-  const handleEmailClick = (e: React.MouseEvent) => {
-    if (window.innerWidth <= 640) {
-      window.location.href = `mailto:${email}`;
-      e.preventDefault();
-    } else {
-      copyToClipboard();
-    }
-  };
 
   return (
     <div className="min-h-screen flex items-center justify-center px-4 mt-7 sm:mt-0 md:mt-3 lg:mt-5">
@@ -113,7 +87,7 @@ const Home = () => {
               About Me
             </Link>
 
-            {/* SEND MESSAGE */}
+            {/* GET IN TOUCH */}
             <Link
               href="/contact"
               className="px-4 sm:px-6 py-2.5 sm:py-3 bg-white/10 text-white rounded-full text-sm sm:text-base font-medium hover:bg-white/20 transition-colors flex items-center gap-2"
@@ -122,33 +96,6 @@ const Home = () => {
               Get in touch
             </Link>
           </div>
-
-          {/* EMAIL COPY */}
-          <button
-            onClick={handleEmailClick}
-            className="group relative flex items-center gap-2 py-2 pl-8 pr-4 hover:bg-transparent transition-all cursor-copy sm:cursor-pointer"
-          >
-            <div className="absolute left-0 flex items-center">
-              <div className="w-3 text-gray-500 group-hover:text-white transition-colors">
-                <VercelLogo />
-              </div>
-              <span className="text-lg font-mono text-gray-400 ml-3 group-hover:text-white transition-colors">
-                ~
-              </span>
-            </div>
-
-            <span className="text-gray-400 group-hover:text-white transition-colors ml-4 sm:text-base">
-              {email}
-            </span>
-
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity ml-1 hidden sm:block">
-              {copied ? (
-                <Check className="w-4 h-4 text-green-500" />
-              ) : (
-                <Copy className="w-4 h-4 text-gray-400 hover:text-white transition-colors" />
-              )}
-            </div>
-          </button>
         </motion.div>
 
         {/* SOCIAL STATS */}
