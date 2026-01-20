@@ -98,7 +98,7 @@ const Home = () => {
         >
           <div className="flex justify-center flex-wrap gap-3 sm:gap-4">
             <a
-              href="/files/cv_pdf/César_Nsingi_CV_EN.pdf"
+              href="/files/cv_pdf/Cesar_Nsingi_CV_EN.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 sm:px-6 py-2.5 sm:py-3 bg-white text-black rounded-full text-sm sm:text-base font-medium hover:bg-gray-100 transition-colors flex items-center gap-2"
