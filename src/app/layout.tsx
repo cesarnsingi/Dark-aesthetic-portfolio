@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		type: 'website',
 		locale: 'en_US',
-		url: 'https://niladri1.vercel.app/',
+		url: 'https://cesarnsingi.com/',
 		title: 'Cesar Nsingi - Full Stack Developer',
 		description: 'Full-stack developer specializing in MERN stack, React.js, Node.js, and modern web technologies.',
 		siteName: 'Cesar Nsingi Portfolio',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 			noimageindex: true,
 		},
 	},
-	metadataBase: new URL('https://niladri1.vercel.app'),
+	metadataBase: new URL('https://cesarnsingi.com'),
 	alternates: {
 		canonical: '/',
 	},
