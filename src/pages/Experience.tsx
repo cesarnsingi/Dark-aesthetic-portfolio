@@ -5,6 +5,20 @@ import { Briefcase, MapPin, Building2, ArrowRight } from 'lucide-react';
 import { ScrollAnimation } from '@/components/ScrollAnimation';
 
 const experiences = [
+	
+	{
+		title: "AI Data Analyst - Uber’s Al Team ",
+		company: "Volga Partners",
+		location: "Remote, USA",
+		period: "Jan 2026 - Present",
+		type: "Freelance",
+		description: [
+			"Analyze datasets by translating raw data into actionable insights that support business improvement strategies",
+			"Process data batches, apply labeling techniques, and manipulate data according to project requirements while ensuring high accuracy"
+		]
+	},
+	
+	
 	{
 		title: "Software Engineer",
 		company: "Cerins",
