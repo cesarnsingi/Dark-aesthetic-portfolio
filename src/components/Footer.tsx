@@ -11,7 +11,6 @@ const Footer = () => {
 				<div className="border-t border-white/10 py-8">
 					<div className="flex flex-col items-center">
 						<p className="text-sm text-gray-400">
-							Design & Developed by Cesar Nsingi
 						</p>
 					</div>
 				</div>

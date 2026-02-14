@@ -1,7 +1,7 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-import { ScrollAnimation } from '@/components/ScrollAnimation';
 
 const projects = [
   {
@@ -33,49 +33,52 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="pt-20 px-4 max-w-5xl mx-auto">
-      <ScrollAnimation>
-        <h2 className="text-3xl font-bold mb-8 text-center gradient-text">
+    <div className="px-5 py-24 flex justify-center">
+      <div className="w-full max-w-[540px]">
+
+        {/* SECTION TITLE - plain text like Home */}
+        <motion.h2
+          className="text-[22px] font-semibold leading-7 text-neutral-900 dark:text-neutral-200 mb-8"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
           Projects
-        </h2>
-      </ScrollAnimation>
+        </motion.h2>
 
-      <div className="flex flex-col gap-4">
-        {projects.map(project => (
-          <ScrollAnimation key={project.title}>
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between bg-gray-800/50 rounded-lg p-4 backdrop-blur-sm border border-white/10">
-
-              <div className="flex flex-wrap items-center gap-2">
-                {/* Title + Live link on same line */}
-                <span className="text-lg font-semibold text-white">
+        <div className="flex flex-col gap-6">
+          {projects.map((project, index) => (
+            <motion.div
+              key={project.title}
+              className="flex flex-col gap-1"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 * index }}
+            >
+              {/* Project Title + Live Link */}
+              <div className="flex items-center gap-2">
+                <span className="text-[14.5px] font-medium text-neutral-800 dark:text-neutral-200">
                   {project.title}
                 </span>
                 <a
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-gray-300 hover:text-white"
+                  className="flex items-center gap-1 text-sm text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
                 >
                   <ExternalLink className="w-4 h-4" />
                   Live
                 </a>
               </div>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mt-2 sm:mt-0">
-                {project.tags.map(tag => (
-                  <span
-                    key={tag}
-                    className="px-2 py-0.5 text-xs bg-purple-500/20 rounded"
-                  >
-                    {tag}
-                  </span>
-                ))}
+              {/* Tags - simple inline text like Home experience */}
+              <div className="flex flex-wrap gap-2 text-xs text-neutral-500">
+                {project.tags.join(' • ')}
               </div>
+            </motion.div>
+          ))}
+        </div>
 
-            </div>
-          </ScrollAnimation>
-        ))}
       </div>
     </div>
   );
