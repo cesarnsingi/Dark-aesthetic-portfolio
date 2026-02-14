@@ -18,12 +18,7 @@ const searchData = [
 		path: '/experience',
 		keywords: ['experience', 'work', 'career', 'jobs', 'professional', 'internships', 'mern', 'web developer', 'full stack', 'software developer']
 	},
-	{
-		title: 'Skills',
-		description: 'Explore my technical skills and expertise',
-		path: '/skills',
-		keywords: ['skills', 'technologies', 'programming', 'languages', 'frameworks', 'web', 'development', 'software', 'tools', 'react', 'node', 'javascript', 'typescript', 'next.js', 'mongodb', 'sql']
-	},
+
 	{
 		title: 'Projects',
 		description: 'View my portfolio of projects',
