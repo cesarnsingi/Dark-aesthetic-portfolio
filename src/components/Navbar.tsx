@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { Code2, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import SearchDialog from './SearchDialog';
 
 const Navbar = () => {
@@ -21,7 +21,6 @@ const Navbar = () => {
     { path: '/experience', label: 'Experience' },
     { path: '/skills', label: 'Skills' },
     { path: '/projects', label: 'Projects' },
-    // ❌ Contact removed from navbar
   ];
 
   return (
@@ -35,13 +34,8 @@ const Navbar = () => {
         <div className="absolute inset-0 bg-black/50 backdrop-blur-xl" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3">
-              <Code2 className="w-8 h-8 text-white" />
-              <span className="text-xl font-bold text-white">César</span>
-            </Link>
-
+          <div className="flex h-16 items-center justify-end">
+            
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               <SearchDialog />
@@ -76,6 +70,7 @@ const Navbar = () => {
                 )}
               </button>
             </div>
+
           </div>
         </div>
 
