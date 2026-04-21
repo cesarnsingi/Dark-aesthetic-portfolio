@@ -52,8 +52,8 @@ const Contact = () => {
   ];
 
   const socialLinks = [
-    { icon: <Github className="w-5 h-5" />, label: 'GitHub', link: 'https://github.com/crnsingi' },
-    { icon: <Linkedin className="w-5 h-5" />, label: 'LinkedIn', link: 'https://www.linkedin.com/in/cesar-nsingi/' }
+    { icon: <Github className="w-5 h-5" />, label: 'GitHub', link: 'https://github.com/cesarrnsingi' },
+    { icon: <Linkedin className="w-5 h-5" />, label: 'LinkedIn', link: 'https://www.linkedin.com/in/cesarnsingi/' }
   ];
 
   return (
