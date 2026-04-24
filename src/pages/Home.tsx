@@ -25,7 +25,7 @@ const experiences = [
   {
     role: "Software Engineer",
     company: "Cerins",
-    period: "2025",
+    period: "2025 - 2026",
   },
   {
     role: "Data Analyst - Customer Experience",
