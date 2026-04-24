@@ -53,7 +53,7 @@ const Loading = () => {
 				<motion.div
 					className="text-sm text-white/50"
 				>
-					Please wait while we set things up
+					Please wait...
 				</motion.div>
 			</motion.div>
 		</div>
