@@ -9,6 +9,12 @@ const projects = [
     live: 'https://www.emaorg.com',
     tags: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'Vercel'],
   },
+    {
+    title: 'NaVia-Cuts',
+    live: 'https://www.naviacuts.com/',
+    tags: ['Next.js', 'TypeScript', 'Tailwinds', 'Resend','Vercel'],
+  },
+
   {
     title: 'Joshua Organisation',
     live: 'https://joshuaorganisation.com',
