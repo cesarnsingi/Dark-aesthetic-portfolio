@@ -28,14 +28,9 @@ const experiences = [
     period: "2025 - 2026",
   },
   {
-    role: "Data Analyst - Customer Experience",
-    company: "Emirates Airlines",
-    period: "2022 - 2024",
-  },
-  {
     role: "Junior Software Engineer",
     company: "EJC Technology",
-    period: "2019 - 2022",
+    period: "2019 - 2024",
   },
 ];
 
