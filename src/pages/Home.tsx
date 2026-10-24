@@ -20,22 +20,17 @@ const experiences = [
   {
     role: "AI Data Analyst - Uber’s AI Team",
     company: "Volga Partners",
-    period: "2026 - Present",
+    period: "2026",
   },
   {
     role: "Software Engineer",
     company: "Cerins",
     period: "2025 - 2026",
   },
-    {
-    role: "Data Analyst - Customer Experience",
-    company: "Emirates Airlines",
-    period: "2022 - 2024",
-  },
   {
     role: "Junior Software Engineer",
     company: "EJC Technology",
-    period: "2019 - 2022",
+    period: "2019 - 2024",
   },
 ];
 
